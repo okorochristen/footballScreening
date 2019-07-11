@@ -28,6 +28,8 @@ Route::get('/profile/manage','ProfileController@manage')->name('manage');
 
 Route::get('profile/manage/{id}','ProfileController@delete')->name('delete');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/profile/search', 'ProfileController@search');

@@ -13,13 +13,6 @@
    
     
 @include('templete.header') 
-@if(count($errors) > 0) 
-    @foreach($errors->all() as error)
-    <div class="alert alert-danger">
-    
-    </div>
-    @endforeach
-@endif    
 @yield('content')
 @include('templete.footer')   
     

@@ -34,6 +34,8 @@
 												
 												<span class="freelancer-detail-item"><strong>player's overall : </strong>{{$profiles->overall}}</span><br>
                                                 
+            
+                                                
                                                 
                                                 <span class="freelancer-detail-item"><strong>player's Birthday : </strong>{{$profiles->dob}}</span><br>
                                                 

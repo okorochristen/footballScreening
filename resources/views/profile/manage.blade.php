@@ -27,6 +27,16 @@
 							<li><a href="{{route('view')}}"><i class="icon-material-outline-rate-review"></i> Views</a></li>
                             <li><a href="{{route('create')}}"><i class="icon-material-outline-assignment"></i> Create Profile</a></li>
                             <li><a href="{{route('manage')}}"><i class="icon-material-outline-business-center"></i>Manage Players</a></li>
+                           <li> <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                               
+<i class="icon-material-outline-power-settings-new"></i>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form></li>
 <!--
                             
 -->
@@ -53,6 +63,7 @@
 
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class="dark">
+                    
 					<ul>
 						<li><a href="#">Home</a></li>
 						<li>Dashboard</li>

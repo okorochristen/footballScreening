@@ -6,14 +6,18 @@
 				<div id="logo">
 					<a href="index.html"><img src="images/logot.png" alt=""></a>
 				</div>
-				<nav id="navigation">
-					<ul id="responsive">
+				<nav id="navigation" style="float:right";>
+					<ul id="responsive" >
 
 						<li><a href="/" class="current">Home</a></li>
-						<li><a href="#">About Us</a></li>
-                        
-						<li><a href="#">Contact Us</a></li>	
-                        <li><a href="{{route('view')}}">View players</a></li>	
+						
+				
+                        <li><a href="{{route('view')}}">View players</a></li>
+                       <li> <form action="{{url('profile/search')}}" method="post"> 
+            @csrf
+            <input id="autocomplete-input" type="text" name="search" placeholder="search...details ">
+       
+                           </form></li>
 					</ul>
 				</nav>
 			

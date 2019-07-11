@@ -3,45 +3,9 @@
 @section('content')
 <div class="dashboard-container">
 
-	<!-- Dashboard Sidebar
-	================================================== -->
-	<div class="dashboard-sidebar">
-		<div class="dashboard-sidebar-inner" data-simplebar>
-			<div class="dashboard-nav-container">
-
-				<!-- Responsive Navigation Trigger -->
-				<a href="#" class="dashboard-responsive-nav-trigger">
-					<span class="hamburger hamburger--collapse" >
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</span>
-					<span class="trigger-title">Dashboard Navigation</span>
-				</a>
-				
-				<!-- Navigation -->
-				<div class="dashboard-nav">
-					<div class="dashboard-nav-inner">
-
-						<ul data-submenu-title="Start">
-							<li class="active"><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
-							<li><a href="{{route('view')}}"><i class="icon-material-outline-rate-review"></i> Views</a></li>
-                            <li><a href="{{route('create')}}"><i class="icon-material-outline-assignment"></i> Create Profile</a></li>
-                            <li><a href="{{route('manage')}}"><i class="icon-material-outline-business-center"></i>Manage Players</a></li>
-<!--
-                            
--->
-                        </ul>
-						
-					</div>
-				</div>
-				<!-- Navigation / End -->
-
-			</div>
-		</div>
-	</div>
-	<!-- Dashboard Sidebar / End -->
+	
 <div class="dashboard-content-inner" style="min-height: 275px;">
+    
 			
 			<!-- Dashboard Headline -->
 			
@@ -55,6 +19,18 @@
 						<!-- Headline -->
 						<div class="headline">
 							<h3><i class="icon-feather-folder-plus"></i> Player's Submission Form</h3>
+                            <div class="dashboard-headline">
+				<span>We are glad to see you again!{{ Auth::user()->name }} </span>
+
+				<!-- Breadcrumbs -->
+				<nav id="breadcrumbs" class="dark">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/home">Dashboard</a></li>
+                        <li><a href="manage"> Manage Players</a></li>
+					</ul>
+				</nav>
+			</div>
 						</div>
 
 						<div class="content with-padding padding-bottom-10">

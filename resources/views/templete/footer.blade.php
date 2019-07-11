@@ -32,7 +32,7 @@
 											</a>
 										</li>
 <!--                                        <li><a href="{{url('login')}}"> <i class="icon-material-outline-power-settings-new"></i></a></li>--> 
-                                          <li><a href="{{url('dashboard')}}"> <i class="icon-material-outline-power-settings-new"></i></a></li>-->
+                                          <li><a href="{{url('home')}}"> <i class="icon-material-outline-power-settings-new"></i></a></li>-->
 										<li>
 											<a href="#" title="Twitter" data-tippy-placement="bottom" data-tippy-theme="light">
 												<i class="icon-brand-twitter"></i>

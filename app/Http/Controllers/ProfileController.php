@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     //
    public function index(){
-        $profiles =Profile::paginate(20);
+        $profiles = Profile::paginate(20);
         return view('profile.index', compact('profiles'));
     }
     
@@ -62,7 +62,7 @@ class ProfileController extends Controller
             $profiles->profile_image=$tostore;
 
         $profiles->save();
-        return redirect('profile/index');
+        return redirect('profile/index')->with('success', 'Profile Updated');;
 
 
     }
@@ -79,5 +79,11 @@ class ProfileController extends Controller
               $profiles->delete();
               return redirect()->back();
 }
+    public function search(Request $request){
+        
+        $keyword = $request->input('search'); 
+       $profiles = Profile::where('name', 'LIKE', '%'.$keyword.'%')->orWhere('area', 'LIKE', '%'.$keyword.'%')->orWhere('age', 'LIKE', '%'.$keyword.'%')->orWhere('gender', 'LIKE', '%'.$keyword.'%')->orWhere('overall', 'LIKE', '%'.$keyword.'%')->orWhere('age', 'LIKE', '%'.$keyword.'%')->get();
+        return view('profile.search', compact('profiles'));
+    }
 
 }

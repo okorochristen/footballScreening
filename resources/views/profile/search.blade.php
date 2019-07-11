@@ -8,19 +8,19 @@
 
 
 <div class="container " style="margin-top:20px;">
-    <div class="col-md-8"  >
-        <form action="{{url('profile/search')}}" method="post"> 
-            @csrf
-            <input id="autocomplete-input" type="text" name="search" placeholder="search...">
-        <input type="submit" value="Go"> 
-        </form>
-       
-    </div>
+    
+    
     <div class="clear-fix"></div>
-
+    
          <div class="row text-left;">
      
-             
+            <nav id="breadcrumbs" class="dark">
+                    
+					<ul>
+                        <li><a href="/home">Home</a></li>
+                        <li>Search results</li>
+					</ul>
+				</nav>
             @if($profiles->all())
 
             @foreach($profiles as $profiles)
