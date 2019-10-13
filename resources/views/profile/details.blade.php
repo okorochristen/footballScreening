@@ -41,6 +41,8 @@
                                                 
                                                 <span class="freelancer-detail-item"><strong>player's Gender: </strong>{{$profiles->gender}}</span><br>
                                                 
+                                                
+                                                
                                                 <span class="freelancer-detail-item"><strong>player's Nationality & Clubsite : </strong>{{$profiles->country}}</span>
                                                 <br>
                                                  <span class="freelancer-detail-item"><strong>player's Postion : </strong>{{$profiles->area}}</span>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Profile;
+use App\DB;
 
 class ProfileController extends Controller
 {
@@ -16,6 +17,7 @@ class ProfileController extends Controller
     
    public function details($id){
         $profiles=Profile::whereId($id)->first();
+//        $profiles=Profile::first()->sum('(overall * overall)');
         return view('profile.details',compact('profiles'));
     } 
        public function edit($id){
